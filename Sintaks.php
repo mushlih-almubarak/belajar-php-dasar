@@ -19,7 +19,11 @@ print_r("Hello <br>");
 var_dump("Hello World! <br>");
 
 // Variabel pada PHP
-// Tidak boleh diawali dengan angka, tapi boleh mengandung angka
+/* 
+1. Tidak boleh diawali dengan angka, tapi boleh mengandung angka
+2. Tidak boleh ada spasi
+3. Tidak boleh ada tanda minus (-), tapi boleh menggunakan underscore (_)
+*/
 $nama = "Mushlih";
 echo "Nama saya $nama <br>";
 // Jika menggunakan titik dua, maka ia tidak bisa membaca isi variabelnya
