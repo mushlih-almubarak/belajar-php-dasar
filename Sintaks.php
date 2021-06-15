@@ -16,7 +16,7 @@ print 12;
 print_r("Hello <br>");
 
 // Ini akan mencetak sekaligun memberitahu jumlah semua karakter (kecuali titik duanya) yang ada pada yang di cetaknya
-var_dump("Hello World! <br>");
+var_dump("Hello World!");
 
 ?>
 
