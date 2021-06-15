@@ -18,22 +18,7 @@ print_r("Hello <br>");
 // Ini akan mencetak sekaligun memberitahu jumlah semua karakter (kecuali titik duanya) yang ada pada yang di cetaknya
 var_dump("Hello World! <br>");
 
-// Variabel pada PHP
-/* 
-1. Tidak boleh diawali dengan angka, tapi boleh mengandung angka
-2. Tidak boleh ada spasi
-3. Tidak boleh ada tanda minus (-), tapi boleh menggunakan underscore (_)
-*/
-$nama = "Mushlih";
-echo "Nama saya $nama <br>";
-// Jika menggunakan titik dua, maka ia tidak bisa membaca isi variabelnya
-echo 'Nama saya $nama <br>';
-
-
-// Operator arimatika: + - * / % (Modulus: Sisa bagi)
-echo 7 + 1
 ?>
-
 
 <!DOCTYPE html>
 <html lang="id">
@@ -46,9 +31,9 @@ echo 7 + 1
 <body>
     <h1>PHP Dapat Ditulis Di Dalam HTML, dan HTML Bisa Ditulis di Dalam PHP</h1>
     <h2>Hello <?php echo "World"; ?></h2>
-    <?php
+<?php
     echo "<h2>Hello World</h2>"
     ?>
-    <h2>Selamat datang <?php echo $nama ?></h2>
 </body>
+
 </html>
