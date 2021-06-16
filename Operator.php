@@ -35,10 +35,20 @@ var_dump(3 !== "3");
 var_dump(3 === 3);
 var_dump(3 !== 3);
 
-// Logika: && (Dan), || (Atau), ! (Tidak)
+// Logika: && (Dan), || (Atau), ! (Tidak/Membalikkan Suatu Nilai Boolean)
 /* Apakah 15 lebih besar dari 20? Tidak. DAN. Apakah 40 dikurangi 2 sampai akhir sisanya 0? Ya
 Hasilnya adalah "false", karena memakai operator &&, jadi kalau salah satunya aja "false", maka hasil akhirnya adalah "false", meskipun ada yang "true" */
 var_dump (15 > 20 && 40 % 2 == 0); 
 // Meskipun ada hasil yang "false", tapi kalau pakai operator || (atau) maka cukup salah satu saja "true", dan hasil akhirnya adalah "true"
 var_dump (15 > 20 || 40 % 2 == 0);
+// Contoh utk operator !
+$x = false;  
+
+if (!$x) {
+    echo "Ini True 1";
+}
+
+if ($x) {
+    echo "Ini True 2";
+}
 ?>
