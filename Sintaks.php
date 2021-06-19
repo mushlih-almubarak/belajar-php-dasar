@@ -12,11 +12,14 @@ print "Selamat Datang <br>";
 // Jika menulis angka tidak perlu pakai titik dua
 print 12;
 
+// Ini akan mencetak sekaligun memberitahu jumlah semua karakter (kecuali titik duanya) yang ada pada yang di cetaknya
+var_dump("Hello World! <br>");
+
 // Bisa utk mencetak array ataupun string
 print_r("Hello <br>");
 
-// Ini akan mencetak sekaligun memberitahu jumlah semua karakter (kecuali titik duanya) yang ada pada yang di cetaknya
-var_dump("Hello World!");
+// Membuat enter
+echo nl2br("baris \n baru");
 
 ?>
 
