@@ -8,5 +8,5 @@
 $nama = "Mushlih";
 echo "Nama saya $nama <br>";
 // Jika menggunakan titik dua, maka ia tidak bisa membaca isi variabelnya
-echo 'Nama saya $nama <br>'
+echo 'Nama saya $nama <br>';
 ?>
