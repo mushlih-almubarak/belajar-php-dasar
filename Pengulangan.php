@@ -42,7 +42,7 @@ do {
 <table border="1" cellpadding="10" cellspacing="0">
     <tr>
         <?php
-// 1 = Nomor awal barisnya | tanda sama dengan (=) setelah (<) maksudnya, agar $baris masih ditambahkan 1 ketika $baris telah sama dengan (=) angka 3 
+// 1 = Nomor awal barisnya | Tanda sama dengan (=) setelah (<) maksudnya, agar $baris masih ditambahkan 1 ketika $baris telah sama dengan (=) angka 3 
             for ( $baris = 1; $baris <= 3; $baris++ ) {
                 echo "<tr>";
                 for ( $kolom = 1; $kolom <= 5; $kolom++ ) {
