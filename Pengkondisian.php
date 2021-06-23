@@ -29,4 +29,19 @@ else {
     echo "Salah";
 }
 
+echo "<br>";
+
+// Switch
+$makanan = "rendang";
+switch ($makanan) {
+    case 'ayam':
+        echo "Makanan favorit Anda adalah Ayam";
+        break; // Agar tidak terprint kata setelahnya
+    case 'rendang':
+        echo "Makanan favorit Anda adalah Rendang";
+        break;
+    default:
+        echo "Makanan favorit Anda adalah tidak tahu";
+        break;
+}
 ?>
