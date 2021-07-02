@@ -1,5 +1,12 @@
 <?php
-    echo date("l, d-M-Y, H:i:s"); // Menampilkan hari/tanggal/bulan/tahun/jam/menit/detik/dll dalam format tertentu (sesuai waktu di komputer kita)
+    // Menyetel zona waktu default | https://www.php.net/manual/en/timezones.php
+    date_default_timezone_set("Asia/Riyadh");
+    // Mengecek zona waktu yang digunakan
+    echo date_default_timezone_get();
+    echo "<br>";
+    // Menampilkan hari/tanggal/bulan/tahun/jam/menit/detik/dll dalam format tertentu (sesuai zona waktu yang kita tentukan diatas)
+    echo date("l, d-M-Y, H:i:s");
+    
 // Parameter-parameter di function date:
 /* 
 1. l = Hari saat ini
