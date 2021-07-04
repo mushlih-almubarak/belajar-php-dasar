@@ -15,7 +15,7 @@
             echo "Selemat Siang, $name";
         } elseif ($jam >= 16 && $jam <= 18) {
             echo "Selamat Sore, $name";
-        } elseif ($jam >= 19 && $jam <= 3) {
+        } elseif ($jam >= 19 || $jam <= 3) {
             echo "Selamat Malam, $name";
         }
     }
