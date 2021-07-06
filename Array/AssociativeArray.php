@@ -6,10 +6,12 @@
     $nama = [
         [
             "depan" => "Mushlih",
+            "tengah" => null,
             "belakang" => "Almubarak"
         ],
         [
             "depan" => "Muhammad",
+            "tengah" => null,
             "belakang" => "hadziq"
         ],
         [
@@ -18,5 +20,25 @@
             "belakang" => "Syakira"
         ]
     ];
-    echo $nama[1]["belakang"];
 ?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associative Array</title>
+</head>
+<body>
+<br>
+    <h1>Daftar Nama</h1>
+    <?php foreach ($nama as $nam) :?>
+    <ul>
+    <li>Nama Depan: <?php echo $nam["depan"] ?></li>
+    <li>Nama Tengah: <?php echo $nam["tengah"] ?></li>
+    <li>Nama Belakang: <?php echo $nam["belakang"] ?></li>
+    </ul>
+    <?php endforeach;?>
+</body>
+</html>
