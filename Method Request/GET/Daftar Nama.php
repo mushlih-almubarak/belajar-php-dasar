@@ -36,7 +36,10 @@ $profil = [
             <li>Gambar: 
             <img src="../../img/<?= $prof["gambar"] ?>" alt="Gambar Profil" width="100" height="100"></li>
             <li>Nama Depan: <?= $prof["depan"] ?></li>
+            <?php
+            if (isset($prof["tengah"])) : ?>
             <li>Nama Tengah: <?= $prof["tengah"]?></li>
+            <?php endif ?>
             <li>Nama Belakang: <?= $prof["belakang"]?></li>
             <a href="Profile.php?nama_depan=<?= $prof["depan"] ?>&nama_tengah=<?= $prof["tengah"] ?>&nama_belakang=<?= $prof["belakang"] ?>&gambar=<?= $prof["gambar"] ?>">Kunjungi Profil</a>
         </ul>
