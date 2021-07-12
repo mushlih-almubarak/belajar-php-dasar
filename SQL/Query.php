@@ -19,4 +19,6 @@
         }
         return $rows;
     }
+
+    $mhs = perintah("SELECT * FROM mahasiswa");
 ?>

@@ -1,6 +1,5 @@
 <?php
     require 'Query.php';
-    $mhs = perintah("SELECT * FROM mahasiswa");
 ?>
 
 <!DOCTYPE html>
