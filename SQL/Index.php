@@ -1,6 +1,4 @@
-<?php
-    require 'Query.php';
-?>
+<?php require 'Query.php'; /* Menghubungkan file */ ?>
 
 <!DOCTYPE html>
 <html lang="id">
@@ -25,7 +23,7 @@
             <th class="warna">Email</th>
             <th class="warna">Jurusan</th>
         </tr>
-        <?php $nomor = 1; ?>
+        <?php $nomor = 1; /* Variabel untuk memberikan penomoran dari 1 */?>
         <?php foreach ($mhs as $siswa) : ?>
         <tr>
             <td class="warna"><?= $nomor ?></td>
