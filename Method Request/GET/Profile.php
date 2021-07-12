@@ -1,6 +1,6 @@
 <?php
 // Cek apakah datanya (getnya) ada di URL?
-if ( !isset($_GET["nama_depan"]) || !isset($_GET["nama_depan"]) || !isset($_GET["nama_belakang"]) || !isset($_GET["gambar"]) ) {
+if ( !isset($_GET["nama_depan"]) || !isset($_GET["nama_tengah"]) || !isset($_GET["nama_belakang"]) || !isset($_GET["gambar"]) ) {
     // Redirect
     header("Location: Daftar Nama.php");
     exit; // Agar kode dibawahnya tidak dijalankan
@@ -25,7 +25,6 @@ if ( !isset($_GET["nama_depan"]) || !isset($_GET["nama_depan"]) || !isset($_GET[
         <li>Foto Profil: <img src="../../img/<?= $_GET["gambar"] ?>" alt="Foto" width="100" height="100"></li>
         <li>Nama Depan: <?= $_GET["nama_depan"] ?></li> <!--nama_depan ngambil dari variabel $_GET yang di tulis di URL di file daftar nama-->
         <?php
-        
         if (!empty($_GET["nama_tengah"])) : ?> <!-- Mengecek apakah elemennya kosong atau tidak -->
             <li>Nama Tengah: <?= $_GET["nama_tengah"] ?></li>
         <?php endif ?>
