@@ -14,6 +14,9 @@
     </style>
 </head>
 <body>
+    <h1>Data Mahasiswa</h1>
+    <a href="penambahan.php">Tambah Data Mahasiswa</a>
+    <br><br>
     <table border="1" cellspacing="0" cellpadding="10">
         <tr>
             <th class="warna">No.</th>
