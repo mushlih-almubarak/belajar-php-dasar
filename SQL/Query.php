@@ -8,7 +8,6 @@
     mysqli_fetch_array() = Mengembalikan keduanya
     */
 
-    // isi dari parameter $query ada di baris ke 3 file index.php di folder ini
     function perintah($query) {
         global $db;
         $hasil = mysqli_query($db, $query); // Melakukan query, $query diambil dari parameter function "perintah"
