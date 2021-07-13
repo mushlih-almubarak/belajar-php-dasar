@@ -25,7 +25,7 @@
             </li>
             <li>
                 <label for="gambar">Gambar: </label>
-                <input type="gambar" id="gambar" name="foto" required>
+                <input type="gambar" id="gambar" name="foto">
             </li>
             <br>
             <button type="submit" name="kirim">Tambah Data</button>
