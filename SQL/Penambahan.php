@@ -13,19 +13,19 @@
         <ol>
             <li>
                 <label for="nama">Nama: </label>
-                <input type="text" id="nama" name="Nama" required> <!--value di atribut "name"nya harus sama sesuai nama field di databasenya-->
+                <input type="text" id="nama" name="nama" required>
             </li>
             <li>
                 <label for="email">Email: </label>
-                <input type="email" id="email" name="Email" required> <!--value di atribut "name"nya harus sama sesuai nama field di databasenya-->
+                <input type="email" id="email" name="email" required>
             </li>
             <li>
                 <label for="jurusan">Jurusan: </label>
-                <input type="text" id="Jurusan" name="Jurusan" required> <!--value di atribut "name"nya harus sama sesuai nama field di databasenya-->
+                <input type="text" id="Jurusan" name="jurusan" required>
             </li>
             <li>
                 <label for="gambar">Gambar: </label>
-                <input type="gambar" id="gambar" name="Gambar" required> <!--value di atribut "name"nya harus sama sesuai nama field di databasenya-->
+                <input type="gambar" id="gambar" name="foto" required>
             </li>
             <br>
             <button type="submit" name="kirim">Tambah Data</button>

@@ -4,10 +4,10 @@
 
     // Cek apakah data telah ditambahkan
     if (isset($_POST["kirim"])) {
-        $nama = $_POST["Nama"];
-        $email = $_POST["Email"];
-        $jurusan = $_POST["Jurusan"];
-        $gambar = $_POST["Gambar"];
+        $nama = $_POST["nama"];
+        $email = $_POST["email"];
+        $jurusan = $_POST["jurusan"];
+        $gambar = $_POST["foto"];
 
         $queri = "INSERT INTO mahasiswa VALUES ('', '$gambar', '$nama', '$email', '$jurusan')"; // Urutannya harus sesuai urutan field yang ada di tabel dbnya
 
