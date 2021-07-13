@@ -31,7 +31,7 @@
         <tr>
             <td class="warna"><?= $nomor; ?></td>
             <td>
-                <a href="">Ubah</a>
+                <a href="update.php?id=<?= $siswa["Id"] ?>">Ubah</a>
                 <span>|</span>
                 <a href="hapus.php?id=<?= $siswa["Id"]; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?') /*Konfirmasi sebelum menghapus datanya dengan js*/">Hapus</a>
             </td>

@@ -8,16 +8,26 @@
     mysqli_fetch_array() = Mengembalikan keduanya
     */
 
-    function perintah($query) {
-        global $db;
-        $hasil = mysqli_query($db, $query); // Melakukan query, $query diambil dari parameter function "perintah"
-        
-        $rows = []; // Membuat array asosiatif baru yang belum ada isi
-        while ($row = mysqli_fetch_assoc($hasil)) {
-            $rows[] = $row;
+    // Query untuk menampilkan semua data
+    if (!isset($_GET["id"])) {
+        function perintah($query) {
+            global $db;
+            $hasil = mysqli_query($db, $query); // Melakukan query, $query diambil dari parameter function "perintah"
+            
+            $rows = []; // Membuat array asosiatif baru yang belum ada isi
+            while ($row = mysqli_fetch_assoc($hasil)) {
+                $rows[] = $row;
+            }
+            return $rows;
         }
-        return $rows;
+
+        $mhs = perintah("SELECT * FROM mahasiswa");
     }
 
-    $mhs = perintah("SELECT * FROM mahasiswa");
+    // Query untuk menampilkan semua data berdasarkan id
+    if (isset($_GET["id"])) {
+        $id = $_GET["id"];
+        $data_id = mysqli_query($db, "SELECT * FROM mahasiswa WHERE Id = $id");
+        $get_id = mysqli_fetch_assoc($data_id);
+    }
 ?>
