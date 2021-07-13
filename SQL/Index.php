@@ -29,18 +29,18 @@
         <?php $nomor = 1; /* Variabel untuk memberikan penomoran dari 1 */?>
         <?php foreach ($mhs as $siswa) : ?>
         <tr>
-            <td class="warna"><?= $nomor ?></td>
+            <td class="warna"><?= $nomor; ?></td>
             <td>
                 <a href="">Ubah</a>
                 <span>|</span>
                 <a href="">Hapus</a>
             </td>
             <td>
-                <img src="../Img/<?= $siswa["Gambar"] ?>" alt="Profil" width="50" height="50">
+                <img src="../Img/<?= htmlspecialchars($siswa["Gambar"]); ?>" alt="Profil" width="50" height="50">
             </td>
-            <td><?= $siswa["Nama"] ?></td>
-            <td><?= $siswa["Email"] ?></td>
-            <td><?= $siswa["Jurusan"] ?></td>
+            <td><?= htmlspecialchars($siswa["Nama"]); ?></td>
+            <td><?= htmlspecialchars($siswa["Email"]); ?></td>
+            <td><?= htmlspecialchars($siswa["Jurusan"]); ?></td>
         </tr>
         <?php $nomor++; ?>
         <?php endforeach ?>
