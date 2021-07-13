@@ -33,7 +33,7 @@
             <td>
                 <a href="">Ubah</a>
                 <span>|</span>
-                <a href="">Hapus</a>
+                <a href="hapus.php?id=<?= $siswa["Id"]; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?') /*Konfirmasi sebelum menghapus datanya dengan js*/">Hapus</a>
             </td>
             <td>
                 <img src="../Img/<?= htmlspecialchars($siswa["Gambar"]); ?>" alt="Profil" width="50" height="50">
