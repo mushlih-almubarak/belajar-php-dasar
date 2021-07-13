@@ -15,9 +15,12 @@
 
         // Mengecek apakah data berhasil ditambahkan
         if (mysqli_affected_rows($db) > 0) {
-            echo "Alhamdulillah, data berhasil ditambahkan";
+            echo "  <script> alert('Alhamdulillah, Data Berhasil Ditambahkan');
+                        document.location.href = 'index.php'; </script>"; // Meredirect (menggunakan js) ketika tombol "ok" di klik
         } else {
-            echo "Maaf, data gagal ditambahkan";
+            echo "  <script>
+                        alert('Maaf, data gagal ditambahkan');
+                    </script>";
         }
     }
 ?>
