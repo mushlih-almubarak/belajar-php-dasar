@@ -15,8 +15,8 @@
             $hasil = mysqli_query($db, $query); // Melakukan query, $query diambil dari parameter function "perintah"
             
             $rows = []; // Membuat array asosiatif baru yang belum ada isi
-            while ($row = mysqli_fetch_assoc($hasil)) {
-                $rows[] = $row;
+            while ($row = mysqli_fetch_assoc($hasil)) { // $row adalah variabel baru
+                $rows[] = $row; 
             }
             return $rows;
         }
@@ -50,5 +50,22 @@
                             </script>";
                 }
                 }
+    }
+
+    // Query untuk pencarian
+    if (isset($_GET["cari"])) {
+        function pencarian($cari) {
+            global $db;
+            $hasil_pencarian = mysqli_query($db, $cari);
+
+            $isi = [];
+            while ($data = mysqli_fetch_assoc($hasil_pencarian)) {
+                $isi[] = $data;
+            }
+            return $isi;
+        }
+
+        $keyword = $_GET["cari"];
+        $cari_data = pencarian("SELECT * FROM mahasiswa WHERE Nama LIKE '%$keyword%' OR Email LIKE '%$keyword%' OR Jurusan LIKE '%$keyword%'");
     }
 ?>
