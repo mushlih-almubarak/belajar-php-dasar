@@ -10,7 +10,6 @@
 </head>
 <body>
     <h1>Ubah Data Mahasiswa</h1>
-    <h2><?php require 'Validasi.php' ?></h2>
     <form method="POST">
         <ol>
             <li>
@@ -27,7 +26,7 @@
             </li>
             <li>
                 <label for="gambar">Gambar: </label>
-                <input type="gambar" id="gambar" value="<?= $get_id["Gambar"] ?>" name="foto">
+                <input type="file" id="gambar" value="<?= $get_id["Gambar"] ?>" name="foto">
             </li>
             <br>
             <button type="submit" name="update">Update Data</button>
