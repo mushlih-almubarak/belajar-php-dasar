@@ -5,6 +5,7 @@
     if (isset($_POST["submit"])) {
         var_dump($_POST);
         var_dump($_FILES);
+        var_dump($_FILES["file"]["size"]); // "size"nya dalam byte
     }
 ?>
 
