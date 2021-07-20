@@ -1,7 +1,7 @@
 <?php
     if (isset($_POST["kirim"])) {
         $info_gambar = pathinfo($_FILES["gambar"]["name"]);
-        var_dump($info_gambar); // Menampilkan info-info yang ada di nama filenya
+        var_dump($info_gambar["extension"]); // Menampilkan info-info yang ada di nama filenya
     }
 ?>
 
