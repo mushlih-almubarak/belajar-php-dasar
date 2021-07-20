@@ -35,11 +35,17 @@
             $nama = $_POST["nama"];
             $email = $_POST["email"];
             $jurusan = $_POST["jurusan"];
-            $gambar = $_POST["foto"];
-            
-            $query = "UPDATE mahasiswa SET Nama = '$nama', Email = '$email', Jurusan = '$jurusan', Gambar = '$gambar' WHERE id = $id";
-            $update_query = mysqli_query($db, $query);
-            
+
+            // Mengecek apakah gambar diubah atau tidak
+            $error = $_FILES["foto"]["error"];
+            if ($error == 4) {
+                $query_tanpa_gambar = "UPDATE mahasiswa SET Nama = '$nama', Email = '$email', Jurusan = '$jurusan' WHERE id = $id";
+                $update_query = mysqli_query($db, $query_tanpa_gambar);
+            } else {
+                require 'UploadSaatUpdate.php';
+                $query_dengan_gambar = "UPDATE mahasiswa SET Nama = '$nama', Email = '$email', Jurusan = '$jurusan', Gambar = '$ubah' WHERE id = $id";
+                $update_query = mysqli_query($db, $query_dengan_gambar);
+            }
                 // Mengecek apakah data berhasil di update
                 if (mysqli_affected_rows($db) > 0) {
                     echo "  <script> alert('Alhamdulillah, Data Berhasil Diubah');
@@ -49,7 +55,7 @@
                                 alert('Maaf, Data Gagal Diubah');
                             </script>";
                 }
-                }
+            }
     }
 
     // Query untuk pencarian

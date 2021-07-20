@@ -9,7 +9,7 @@
 <body>
     <h1>Tambah Data Mahasiswa</h1>
     <h2><?php require 'Validasi.php' ?></h2>
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         <ol>
             <li>
                 <label for="nama">Nama: </label>
@@ -25,7 +25,7 @@
             </li>
             <li>
                 <label for="gambar">Gambar: </label>
-                <input type="gambar" id="gambar" name="foto">
+                <input type="file" id="gambar" name="foto" required>
             </li>
             <br>
             <button type="submit" name="kirim">Tambah Data</button>

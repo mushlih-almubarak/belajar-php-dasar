@@ -1,5 +1,10 @@
-<?php require 'Query.php'; ?>
-
+<?php 
+    require 'Query.php';
+    // Redirect jika tidak ada data di URL
+    if (!isset($_GET["id"])) { 
+        header("Location: Index.php");
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -10,7 +15,7 @@
 </head>
 <body>
     <h1>Ubah Data Mahasiswa</h1>
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         <ol>
             <li>
                 <label for="nama">Nama: </label>
@@ -26,7 +31,10 @@
             </li>
             <li>
                 <label for="gambar">Gambar: </label>
-                <input type="file" id="gambar" value="<?= $get_id["Gambar"] ?>" name="foto">
+                <br>
+                <img src="../Img/<?= $get_id["Gambar"] ?>" alt="foto profil" width="100" height="100">
+                <br>
+                <input type="file" id="gambar" name="foto">
             </li>
             <br>
             <button type="submit" name="update">Update Data</button>
