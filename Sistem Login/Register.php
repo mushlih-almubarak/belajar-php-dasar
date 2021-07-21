@@ -28,5 +28,7 @@
             <br><br>
             <button type="submit" name="daftar">Daftar</button>
     </form>
+    <br>
+    <span>Sudah punya akun? <a href="Login.php">Login disini</a></span>
 </body>
 </html>
