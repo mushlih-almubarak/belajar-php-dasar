@@ -1,4 +1,9 @@
 <?php
+    session_start();
+    // Redirect ke halaman login jika sesinya tidak ada 
+    if (!isset($_SESSION["login"])) {
+        header("Location: ../Sistem Login/login.php");
+    }
     // Halaman validasi untuk penambahan.php
     // Koneksi ke database
     $db = mysqli_connect("localhost", "root", "", "php_dasar") ;

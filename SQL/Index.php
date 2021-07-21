@@ -52,6 +52,8 @@
                 <?php $nomor++; ?>
                 <?php endforeach; ?>
             </table>
+            <br>
+            <a href="../Sistem Login/Logout.php">logout</a>
         <?php else : ?>
             <?php $no = 1; ?>
             <?php foreach ($cari_data as $data) : ?>
@@ -74,6 +76,8 @@
                 </table>
             <br>
             <a href="index.php">Kembali ke semua daftar mahasiswa</a>
+            <br>
+            <a href="../Sistem Login/Logout.php">logout</a>
         <?php endif; ?>
 </body>
 </html>

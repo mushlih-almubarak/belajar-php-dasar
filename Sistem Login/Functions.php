@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $koneksi = mysqli_connect("localhost", "root", "", "php_dasar");
 
     // Logika untuk Register.php
@@ -65,7 +66,8 @@
             return false;
         }
         
-        // Jika benar semua
+        // Jika benar semua, setel session kemudian redirect ke index.php
+        $_SESSION["login"] = "login";
         header("Location: ../SQL/Index.php");
     }
 ?>

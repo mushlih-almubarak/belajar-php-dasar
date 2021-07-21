@@ -1,5 +1,9 @@
 <?php
-    require 'Index.php';
+    session_start();
+    // Redirect ke halaman login jika sesinya tidak ada 
+    if (!isset($_SESSION["login"])) {
+        header("Location: ../Sistem Login/login.php");
+    }
     $id = $_GET["id"];
 
     if (isset($id)) {

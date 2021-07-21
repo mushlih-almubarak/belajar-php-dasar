@@ -1,4 +1,10 @@
-<?php require 'Functions.php' ?>
+<?php 
+    require 'Functions.php';
+    // Jika session sudah ada, redirect ke index
+    if (isset($_SESSION["login"])) {
+        header("Location: ../SQL/Index.php");
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="id">

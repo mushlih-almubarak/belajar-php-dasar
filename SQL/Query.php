@@ -1,4 +1,9 @@
 <?php
+    session_start();
+    // Jika sesinya belum di set, redirect ke halaman login
+    if (!isset($_SESSION["login"])) {
+        header("Location: ../Sistem Login/login.php");
+    }
     // Koneksi ke database: "nama_host", "usernameMySQL", "passwordMySQL", "nama_database"
     $db = mysqli_connect("localhost", "root", "", "php_dasar");
 
