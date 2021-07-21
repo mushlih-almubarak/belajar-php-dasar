@@ -13,11 +13,11 @@
     <form method="POST">
         <li>
             <label for="username">Username: </label>
-            <input type="text" id="username" name="username">
+            <input type="text" id="username" name="username" required>
         </li>
         <li>
             <label for="password">password: </label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" required>
         </li>
         <br>
         <button type="submit" name="login">Login</button>
