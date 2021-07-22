@@ -3,7 +3,10 @@
     // Redirect ke halaman login jika sesinya tidak ada 
     if (!isset($_SESSION["login"])) {
         header("Location: ../Sistem Login/login.php");
+        exit;
     }
+    
+    $db = mysqli_connect("localhost", "root", "", "php_dasar") ;
     $id = $_GET["id"];
 
     if (isset($id)) {
