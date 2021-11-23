@@ -1,3 +1,2 @@
 <?php
-    echo $_COOKIE["nama"];
-?>
+echo $_COOKIE["nama_saya"];
